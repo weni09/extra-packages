@@ -1842,7 +1842,10 @@ div>.table>.tbody>.tr:nth-of-type(2n) {
     content: "\e908";
     color: #8965e0 !important;
 }
-
+.main>.main-left>.nav>.slide>.menu[data-title=Statistics]:before {
+    content: "\e99c";
+    color: #E6C773 !important;
+}
 .main>.main-left>.nav>.slide>.menu[data-title=Bandwidth_Monitor]:before {
     content: "\e90d";
     color: #5e72e4 !important;
