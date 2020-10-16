@@ -66,7 +66,8 @@ start(){
 	fi
 
 	#获取FORWARD ACCEPT规则行号
-	FA_INDEX=`iptables -t filter -L FORWARD|tail -n +3|sed -n -e '/^ACCEPT/='`
+	#FA_INDEX=`iptables -t filter -L FORWARD|tail -n +3|sed -n -e '/^ACCEPT/='`
+	FA_INDEX=`iptables -t filter -L FORWARD --line-numbers | tail -n +3 | grep -E ACCEPT | grep ctstate | grep fw3 | awk '{print $1}'`
 	if [ -n "$FA_INDEX" ]; then
 			let FA_INDEX+=1
 	fi
